@@ -5,18 +5,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
-/**
- *
- * @author Rian Atri
- * @version 1.0
- */
-@Data
+import java.sql.Date;
+
 @NoArgsConstructor
 @AllArgsConstructor
-public class BProjectUser {
+@Data
+public class BProjectTag {
     @Id
     private Long id;
-    private Long userId;
-    private Long projectId;
-    private Boolean isactive;
+    private Long tag_id;
+    private Long project_id;
+    private String name;
+    private Long created_by;
+    private Date created_at;
+    private Date updated_at;
 }

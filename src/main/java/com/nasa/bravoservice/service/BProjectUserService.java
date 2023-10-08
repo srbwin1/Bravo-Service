@@ -4,9 +4,9 @@ import com.nasa.bravoservice.entity.BProjectUser;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 public interface BProjectUserService {
 
-    Flux<BProjectUser> getAll();
-
-    Mono<BProjectUser> getBProjectUserById(Long id);
+    Flux<BProjectUser> getByUserId(Long id);
 }

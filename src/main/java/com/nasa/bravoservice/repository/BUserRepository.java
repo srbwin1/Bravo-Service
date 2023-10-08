@@ -1,4 +1,4 @@
-package com.nasa.bravoservice.repositories;
+package com.nasa.bravoservice.repository;
 
 import com.nasa.bravoservice.entity.BUser;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
@@ -13,12 +13,5 @@ import reactor.core.publisher.Mono;
  */
 @Repository
 public interface BUserRepository extends R2dbcRepository<BUser, Long> {
-
-    @Override
-    Flux<BUser> findAll();
-
-    @Override
-    Mono<BUser> findById(Long aLong);
-
 
 }

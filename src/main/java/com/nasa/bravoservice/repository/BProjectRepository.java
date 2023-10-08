@@ -1,4 +1,4 @@
-package com.nasa.bravoservice.repositories;
+package com.nasa.bravoservice.repository;
 
 import com.nasa.bravoservice.entity.BProject;
 import org.jetbrains.annotations.NotNull;
@@ -14,14 +14,5 @@ import reactor.core.publisher.Mono;
  */
 @Repository
 public interface BProjectRepository extends R2dbcRepository<BProject, Long> {
-
-    @NotNull
-    @Override
-    Flux<BProject> findAll();
-
-    @NotNull
-    @Override
-    Mono<BProject> findById(@NotNull Long id);
-
 
 }
