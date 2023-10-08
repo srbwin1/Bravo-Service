@@ -9,5 +9,7 @@ package com.nasa.bravoservice.common;
 public class Constant {
     public static final String USER_ID = "user_id";
 
+    public static final String Name = "name";
+
     public static final String TAG_ID = "tag_id";
 }
