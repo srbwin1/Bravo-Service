@@ -15,7 +15,7 @@ public class CorsConfiguration implements WebFluxConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry corsRegistry) {
         corsRegistry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
+                .allowedOrigins("https://bravo-client.vercel.app","http://localhost:3000")
                 .allowedMethods("GET","PUT","POST")
                 .maxAge(3600);
     }

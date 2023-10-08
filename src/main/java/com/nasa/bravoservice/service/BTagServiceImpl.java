@@ -1,7 +1,7 @@
 package com.nasa.bravoservice.service;
 
 import com.nasa.bravoservice.entity.BTag;
-import com.nasa.bravoservice.repositories.BTagRepository;
+import com.nasa.bravoservice.repository.BTagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;

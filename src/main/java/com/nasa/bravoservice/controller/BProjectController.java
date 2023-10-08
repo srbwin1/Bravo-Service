@@ -10,7 +10,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- *
  * @author Rian Atri
  * @version 1.0
  */
@@ -22,12 +21,12 @@ public class BProjectController {
     private BProjectService bProjectService;
 
     @GetMapping(value = "health")
-    public Mono<String> healthy(){
+    public Mono<String> healthy() {
         return Mono.just("Healthy");
     }
 
     @GetMapping("project")
-    public Flux<BProject> getAll(){
+    public Flux<BProject> getAll() {
         return bProjectService.getAll();
     }
 }

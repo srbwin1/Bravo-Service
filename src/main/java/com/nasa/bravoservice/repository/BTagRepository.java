@@ -1,4 +1,4 @@
-package com.nasa.bravoservice.repositories;
+package com.nasa.bravoservice.repository;
 
 import com.nasa.bravoservice.entity.BTag;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;

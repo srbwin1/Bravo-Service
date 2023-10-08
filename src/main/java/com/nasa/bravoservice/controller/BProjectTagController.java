@@ -1,14 +1,13 @@
 package com.nasa.bravoservice.controller;
 
-import com.nasa.bravoservice.entity.BUserTag;
-import com.nasa.bravoservice.service.BUserTagService;
+import com.nasa.bravoservice.entity.BProjectTag;
+import com.nasa.bravoservice.service.BProjectTagService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 /**
  * @author Rian Atri
@@ -17,13 +16,18 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/v1")
 @AllArgsConstructor
+public class BProjectTagController {
 
-public class BUserTagController {
+    private BProjectTagService bProjectTagService;
 
-    private BUserTagService bUserTagService;
+    @GetMapping("project-tag")
+    public Flux<BProjectTag> getAll() {
+        return bProjectTagService.getAll();
+    }
 
-    @GetMapping("user-tag/{id}")
-    public Flux<BUserTag> getById(@PathVariable Long id) {
-        return bUserTagService.getByTagId(id);
+
+    @GetMapping("project-tag/{id}")
+    public Flux<BProjectTag> getById(@PathVariable Long id) {
+        return bProjectTagService.getByTagId(id);
     }
 }

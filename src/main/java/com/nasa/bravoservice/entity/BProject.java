@@ -26,7 +26,7 @@ public class BProject implements Serializable {
     private String description;
     private String keywords;
     private String fields_of_science;
-    private Boolean isActive;
+    private Boolean isactive;
     private String agency_sponsor;
     private String agency_sponsor_other;
     private String gov_contact;

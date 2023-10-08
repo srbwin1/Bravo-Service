@@ -1,4 +1,4 @@
-package com.nasa.bravoservice.repositories;
+package com.nasa.bravoservice.repository;
 
 import com.nasa.bravoservice.entity.BUserTag;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
@@ -13,12 +13,4 @@ import reactor.core.publisher.Mono;
  */
 @Repository
 public interface BUserTagRepository extends R2dbcRepository<BUserTag, Long> {
-
-    @Override
-    Flux<BUserTag> findAll();
-
-    @Override
-    Mono<BUserTag> findById(Long id);
-
-
 }
