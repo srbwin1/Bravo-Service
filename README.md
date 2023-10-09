@@ -17,7 +17,7 @@ Welcome to Bravo Backend, the server-side component of the open science collabor
 ## Installation
 
 1. Clone the Bravo Server repository to your local machine:
-   git clone https://github.com/Rian354/Bravo-Server.git
+   git clone https://github.com/srbwin1/bravo-nasa-service
 
 2. Navigate to the Bravo Backend directory:
    cd Bravo-Server
