@@ -10,7 +10,6 @@ import reactor.core.publisher.Mono;
 @Service
 public class BProjectServiceImpl implements BProjectService{
 
-
     @Autowired
     private BProjectRepository bProjectRepository;
 
@@ -23,4 +22,5 @@ public class BProjectServiceImpl implements BProjectService{
     public Mono<BProject> getBProjectById(Long id) {
         return bProjectRepository.findById(id);
     }
+
 }

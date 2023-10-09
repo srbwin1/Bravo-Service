@@ -4,6 +4,7 @@ import com.nasa.bravoservice.entity.BProject;
 import com.nasa.bravoservice.service.BProjectService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -28,5 +29,11 @@ public class BProjectController {
     @GetMapping("project")
     public Flux<BProject> getAll() {
         return bProjectService.getAll();
+    }
+
+
+    @GetMapping("project/{id}")
+    public Mono<BProject> getById(@PathVariable Long id) {
+        return bProjectService.getBProjectById(id);
     }
 }
